@@ -1,5 +1,7 @@
 package classesAndObjects;
 
+import java.text.DecimalFormat;
+
 public class ConstructorOverloading {
 
 	public static void main(String[] args) {
@@ -7,6 +9,7 @@ public class ConstructorOverloading {
 		InventoryItem i2=new InventoryItem("abc");
 		InventoryItem i3=new InventoryItem("abc",3);
 		System.out.println(i1);
+		
 	}
 	
 }
@@ -21,14 +24,13 @@ class InventoryItem{
 	}
 	
 	public InventoryItem(String description) {
-		super();
 		this.description = description;
+		units=0;
 	}
 
 
 
 	public InventoryItem(String description, int units) {
-		super();
 		this.description = description;
 		this.units = units;
 	}

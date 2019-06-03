@@ -13,6 +13,6 @@ class MyMath {
 public class MethodOverloadingEx{
 	public static void main(String[] args) {
 		System.out.println(MyMath.square(5));
-		System.out.println(MyMath.square(5.));
+		System.out.println(MyMath.square(5.0));
 	}
 }

@@ -1,9 +1,9 @@
-package secondlookatobject;
+package classesAndObjects;
 
 public class EqualsToExample {
 	public static void main(String[] args) {
-		Stock s1=new Stock("GMX",55.3);
-		Stock s2=new Stock("GMX",55.3);
+		Stock1 s1=new Stock1("GMX",55.3);
+		Stock1 s2=new Stock1("GMX",55.3);
 		System.out.println(s1==s2);
 		System.out.println(s1.equals(s2));
 	}
@@ -11,14 +11,13 @@ public class EqualsToExample {
 }
 
 
-class Stock{
+class Stock1{
 	String symbol;
 	double sharePrice;
 	
 	
 	
-	public Stock(String symbol, double sharePrice) {
-		super();
+	public Stock1(String symbol, double sharePrice) {
 		this.symbol = symbol;
 		this.sharePrice = sharePrice;
 	}
@@ -37,20 +36,6 @@ class Stock{
 		this.sharePrice = sharePrice;
 	}
 
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		long temp;
-		temp = Double.doubleToLongBits(sharePrice);
-		result = prime * result + (int) (temp ^ (temp >>> 32));
-		result = prime * result + ((symbol == null) ? 0 : symbol.hashCode());
-		return result;
-	}
-
-
-	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;
@@ -58,7 +43,7 @@ class Stock{
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Stock other = (Stock) obj;
+		Stock1 other = (Stock1) obj;
 		if (Double.doubleToLongBits(sharePrice) != Double.doubleToLongBits(other.sharePrice))
 			return false;
 		if (symbol == null) {
