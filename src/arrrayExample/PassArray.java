@@ -1,6 +1,6 @@
 package arrrayExample;
 
-public class PassElements {
+public class PassArray {
 	public static void main(String[] args) {
 		int []a= {2,3,5,2,1};
 		passElem(a[4]);

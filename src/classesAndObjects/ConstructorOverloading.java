@@ -16,8 +16,8 @@ public class ConstructorOverloading {
 
 
 class InventoryItem{
-	String description;
-	int units;
+	private String description;
+	private int units;
 	
 	public InventoryItem() {
 		description="";

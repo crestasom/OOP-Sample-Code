@@ -22,6 +22,12 @@ class Stock {
 
 	public Stock(String sym) {
 		this(sym, 0.0); // calls above constructor
+		
+	}
+	
+	public Stock()
+	{
+		this("");
 	}
 
 	@Override

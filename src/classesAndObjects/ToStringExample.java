@@ -37,10 +37,11 @@ class XYZ {
 		this.z = z;
 	}
 
-	/*
-	 * Uncomment this method to see output
-	 * public String toString() { return "Value are [x=" + x + ", y=" + y + ", z=" +
-	 * z + "]"; }
-	 */
+	
+	public String toString() {
+		return "value of x=" + x + ", value of y=" + y + ", value of z=" + z + "]";
+	}
+
+	
 
 }

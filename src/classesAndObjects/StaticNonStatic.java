@@ -3,7 +3,9 @@ package classesAndObjects;
 public class StaticNonStatic {
 
 	public static void main(String[] args) {
-		/*display();// invalid!! cannot call non static method from static one.*/
+		/*
+		 * display();// invalid!! cannot call non static method from static one.
+		 */		
 		StaticNonStatic sns=new StaticNonStatic();
 		sns.display();
 	}

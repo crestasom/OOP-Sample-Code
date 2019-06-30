@@ -12,7 +12,9 @@ public class ObjectArray {
 		System.out.println("Enter Person Detail");
 		for(int i=0;i<3;i++) {
 			age=sc.nextInt();
+			sc.nextLine();
 			name=sc.nextLine();
+			
 			p[i]=new Person(age, name);
 		}
 		sc.close();
