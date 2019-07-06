@@ -19,6 +19,7 @@ class Vehicle {
 //Creating a child class  
 class Bike2 extends Vehicle {
 //defining the same method as in the parent class  
+	// must have same signature
 	void run() {
 		System.out.println("Bike is running safely");
 	}

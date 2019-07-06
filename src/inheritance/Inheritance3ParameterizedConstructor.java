@@ -18,7 +18,7 @@ class Person{
 class Student extends Person{
 
 	public Student(int age, String name) {
-		super(age, name);
+		super(age, name);// commenting this line will produce error
 		System.out.println("Inside Student");
 	}
 	
