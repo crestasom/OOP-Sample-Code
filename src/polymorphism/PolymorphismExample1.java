@@ -7,6 +7,7 @@ public class PolymorphismExample1 {
 		Shape s2=new Square(4.5);
 		System.out.println(s1.getArea());
 		System.out.println(s2.getArea());
+		//System.out.println(s2.getSide());
 	}
 }
 

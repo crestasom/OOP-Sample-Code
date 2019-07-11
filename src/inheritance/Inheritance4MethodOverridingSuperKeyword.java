@@ -1,15 +1,15 @@
 package inheritance;
 
-public class Inheritance4MethodOverriding {
-	public static void main(String args[]) {
-		Bike2 obj = new Bike2();// creating object
-		obj.run();// calling method
+public class Inheritance4MethodOverridingSuperKeyword {
+	public static void main(String[] args) {
+		Bike3 b3=new Bike3();
+		b3.run();
 	}
-}
 
+}
 //Java Program to illustrate the use of Java Method Overriding  
 //Creating a parent class.  
-class Vehicle {
+class Vehicle1 {
 //defining a method  
 	void run() {
 		System.out.println("Vehicle is running");
@@ -17,13 +17,11 @@ class Vehicle {
 }
 
 //Creating a child class  
-class Bike2 extends Vehicle {
+class Bike3 extends Vehicle1 {
 //defining the same method as in the parent class  
 	// must have same signature
 	void run() {
-		/*
-		 * super.run(); //uncomment this to observe Output
-		 */		
+		//super.run();
 		System.out.println("Bike is running safely");
 	}
 
