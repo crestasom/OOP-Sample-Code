@@ -12,7 +12,17 @@ class Person{
 		this.name = name;
 	}
 
-	
+	@Override
+	public boolean equals(Object obj) {
+		boolean status=false;
+		if(obj instanceof Person) {
+			Person p=(Person)obj;
+			if(age==p.age && name.equals(p.name)) {
+				status=true;
+			}
+		}
+		return status;
+	}
 }
 
 class Student extends Person{
