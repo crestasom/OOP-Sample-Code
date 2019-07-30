@@ -11,9 +11,7 @@ public class PolymorphismExample2 {
 }
 
 abstract class Shape1 {
-	public double getArea() {
-		return 0.0;
-	}
+	public abstract double getArea();
 
 }
 
@@ -26,9 +24,9 @@ class Rectangle1 extends Shape1{
 		this.width = width;
 	}
 	
-	public double getArea() {
-		return length*width;
-	}
+	
+	  public double getArea() { return length*width; }
+	 
 	
 }
 
