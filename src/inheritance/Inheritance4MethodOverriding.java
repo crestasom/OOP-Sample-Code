@@ -23,8 +23,9 @@ class Bike2 extends Vehicle {
 	void run() {
 		/*
 		 * super.run(); //uncomment this to observe Output
-		 */		
+		 */	
 		System.out.println("Bike is running safely");
+		super.run();
 	}
 
 }
