@@ -25,7 +25,7 @@ public class BorderWindow extends JFrame{
 				panel.add(jb2, BorderLayout.SOUTH);
 				panel.add(jb3, BorderLayout.WEST);
 				panel.add(jb4, BorderLayout.EAST);
-				panel.add(jb5, BorderLayout.CENTER);
+				//jpanel.add(jb5, BorderLayout.CENTER);
 				
 			
 				add(panel);
