@@ -19,9 +19,9 @@ public class FlowWindow extends JFrame {
 
 		// Define the panel to hold the buttons
 		JPanel panel = new JPanel();
-		panel.setLayout(new FlowLayout());
+		//panel.setLayout(new FlowLayout());
 		//to align component to left. default alignment is center
-		//panel.setLayout(new FlowLayout(FlowLayout.LEFT));
+		panel.setLayout(new FlowLayout(FlowLayout.LEFT,20,20));
 		panel.add(jb1);
 		panel.add(jb2);
 		panel.add(jb3);
