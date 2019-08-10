@@ -69,11 +69,8 @@ public class CheckBoxDemo extends JFrame implements ItemListener {
 		hairButton.addItemListener(this);
 		teethButton.addItemListener(this);
 
-		// Indicates what's on the geek.
-		choices = new StringBuffer("cght");
-
 		// Put the check boxes in a column in a panel
-		JPanel checkPanel = new JPanel(new GridLayout(0, 1));
+		JPanel checkPanel = new JPanel(new GridLayout(1, 1));
 		checkPanel.add(chinButton);
 		checkPanel.add(glassesButton);
 		checkPanel.add(hairButton);
