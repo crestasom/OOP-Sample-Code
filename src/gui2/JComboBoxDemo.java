@@ -1,9 +1,11 @@
 package gui2;
 
 import java.awt.Color;
-import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.BorderFactory;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JPanel;
@@ -12,22 +14,25 @@ import javax.swing.JTextField;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
-public class JListDemo extends JFrame implements ListSelectionListener{
+public class JComboBoxDemo extends JFrame implements ActionListener{
 	String[] names = { "Bill", "Geri", "Greg", "Jean", "Kirk", "Phillip", "Susan" };
-	String[] monthList = { "Janaury", "Febuary", "March", "April", "May", "June", "July","August","September","October","November","December" };
-	JList<String> nameList;
+	
+	JComboBox<String> nameList;
 	JTextField choose;
 
-	public JListDemo() {
+	public JComboBoxDemo() {
 		// TODO Auto-generated constructor stub
 
-		choose=new JTextField(20);
+		choose=new JTextField(25);
 		choose.setText("You have chosen:");
 		choose.setEditable(false);
 		JPanel panel=new JPanel();
-		panel.setLayout(new FlowLayout(FlowLayout.LEFT,10,10));
-		nameList = new JList<>(names);
-		nameList.addListSelectionListener(this);
+		nameList = new JComboBox<>(names);
+		nameList.addActionListener(this);
+		nameList.setEditable(true);
+		//uncomment this to set jcombobox to editable mode
+		//nameList.setEditable(true);
+		
 		nameList.setBorder(
 				  BorderFactory.createLineBorder(Color.black,1));
 		//uncomment this and comment the next line to see demo of scrollbar
@@ -49,12 +54,14 @@ public class JListDemo extends JFrame implements ListSelectionListener{
 	}
 
 	public static void main(String[] args) {
-		new JListDemo();
+		new JComboBoxDemo();
 	}
 
 	@Override
-	public void valueChanged(ListSelectionEvent e) {
-		choose.setText("You have chosen:"+nameList.getSelectedValue());
-		
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		choose.setText("You have chosen:"+nameList.getSelectedItem());	
 	}
+
+
 }

@@ -41,8 +41,7 @@ public class RadioButtonDemo extends JFrame implements ActionListener {
 	static String dogString = "Dog";
 	static String rabbitString = "Rabbit";
 	static String pigString = "Pig";
-
-	JLabel picture;
+	JRadioButton pigButton;
 
 	public RadioButtonDemo() {
 		
@@ -50,7 +49,7 @@ public class RadioButtonDemo extends JFrame implements ActionListener {
 		JRadioButton birdButton = new JRadioButton(birdString);
 		birdButton.setMnemonic(KeyEvent.VK_B);
 		birdButton.setActionCommand(birdString);
-		birdButton.setSelected(true);
+		//birdButton.setSelected(true);
 
 		JRadioButton catButton = new JRadioButton(catString);
 		catButton.setMnemonic(KeyEvent.VK_C);
@@ -64,7 +63,7 @@ public class RadioButtonDemo extends JFrame implements ActionListener {
 		rabbitButton.setMnemonic(KeyEvent.VK_R);
 		rabbitButton.setActionCommand(rabbitString);
 
-		JRadioButton pigButton = new JRadioButton(pigString);
+		pigButton = new JRadioButton(pigString);
 		pigButton.setMnemonic(KeyEvent.VK_P);
 		pigButton.setActionCommand(pigString);
 
@@ -101,6 +100,7 @@ public class RadioButtonDemo extends JFrame implements ActionListener {
 	/** Listens to the radio buttons. */
 	public void actionPerformed(ActionEvent e) {
 			JOptionPane.showMessageDialog(null,e.getActionCommand()+" is clicked");
+			//pigButton.doClick();
 	}
 
 	public static void main(String[] args) {
