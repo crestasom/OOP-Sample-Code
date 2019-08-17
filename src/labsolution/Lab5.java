@@ -104,5 +104,4 @@ class readymadeCake extends Cake {
 	public double calcPrice() {
 		return quantity * rate;
 	}
-
 }
