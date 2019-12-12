@@ -4,14 +4,14 @@ public class Inheritance1 {
 
 	public static void main(String[] args) {
 		FinalExam exam=new FinalExam();
-		exam.setScore(85.5);
+		exam.setScore(85);
 		System.out.println("Score = "  + exam.getScore());
 	}		
 }
 
 
 class GradedActivity{
-	public double score;
+	private double score;
 
 	public double getScore() {
 		return score;

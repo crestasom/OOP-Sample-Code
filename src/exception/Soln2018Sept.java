@@ -75,7 +75,7 @@ class CheckingAccount extends Account {
 }
 
 class OverDraftException extends Exception {
-	double DEFICIT;
+	private double DEFICIT;
 
 	public OverDraftException(String msg, double deficit) {
 		super(msg);

@@ -5,7 +5,7 @@ public class Inheritance4MethodOverriding2 {
 	public static void main(String args[]) {
 		Nabil s = new Nabil();
 		Sunrise i = new Sunrise();
-		Prabhu a = new Prabhu();
+		Prabhu  a = new Prabhu();
 		System.out.println("Nabil Rate of Interest: " + s.getRateOfInterest());
 		System.out.println("Sunrise Rate of Interest: " + i.getRateOfInterest());
 		System.out.println("Prabhu Rate of Interest: " + a.getRateOfInterest());
