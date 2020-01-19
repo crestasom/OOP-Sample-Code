@@ -2,18 +2,12 @@ package gui;
 
 import java.awt.Color;
 import java.awt.HeadlessException;
-import java.awt.Panel;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.BoxLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-
-import javafx.scene.layout.Pane;
 
 public class BackGroundJSlider extends JFrame implements ChangeListener {
 	JSlider rSlider, gSlider, bSlider;
@@ -23,22 +17,22 @@ public class BackGroundJSlider extends JFrame implements ChangeListener {
 		super(title);
 
 		rSlider = new JSlider(JSlider.HORIZONTAL, 0, 255, 0);
-		rSlider.setMajorTickSpacing(5);
-		rSlider.setMinorTickSpacing(1);
+		rSlider.setMajorTickSpacing(20);
+		rSlider.setMinorTickSpacing(5);
 		rSlider.setPaintLabels(true);
 		rSlider.setPaintTicks(true);
 		rSlider.addChangeListener(this);
 
 		gSlider = new JSlider(JSlider.HORIZONTAL, 0, 255, 0);
-		gSlider.setMajorTickSpacing(5);
-		gSlider.setMinorTickSpacing(1);
+		gSlider.setMajorTickSpacing(20);
+		gSlider.setMinorTickSpacing(5);
 		gSlider.setPaintLabels(true);
 		gSlider.setPaintTicks(true);
 		gSlider.addChangeListener(this);
 
 		bSlider = new JSlider(JSlider.HORIZONTAL, 0, 255, 0);
-		bSlider.setMajorTickSpacing(5);
-		bSlider.setMinorTickSpacing(1);
+		bSlider.setMajorTickSpacing(20);
+		bSlider.setMinorTickSpacing(5);
 		bSlider.setPaintLabels(true);
 		bSlider.setPaintTicks(true);
 		bSlider.addChangeListener(this);
@@ -72,7 +66,6 @@ public class BackGroundJSlider extends JFrame implements ChangeListener {
 		red = rSlider.getValue();
 		green = gSlider.getValue();
 		blue = bSlider.getValue();
-		System.out.println(red + ":" + green + ":" + blue);
 		p2.setBackground(new Color(red, green, blue));
 	}
 
