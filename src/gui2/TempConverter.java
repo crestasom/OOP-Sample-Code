@@ -15,6 +15,7 @@ public class TempConverter extends JFrame implements ChangeListener {
 	JLabel label;
 	public TempConverter(String title) {
 		super(title);
+		
 		tempSlider=new JSlider(JSlider.HORIZONTAL,20,100,25);
 		tempSlider.setMajorTickSpacing(5);
 		tempSlider.setMinorTickSpacing(1);

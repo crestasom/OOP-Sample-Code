@@ -48,8 +48,7 @@ class Person123 {
 		this.email = email;
 	}
 
-	@Override
-	public boolean equals(Object p2) {
+	public boolean equals(Person123 p2) {
 		if (p2.getName().equals(this.name)) {
 			return true;
 		}
