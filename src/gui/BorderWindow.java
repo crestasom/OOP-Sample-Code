@@ -21,11 +21,11 @@ public class BorderWindow extends JFrame{
 				// Define the panel to hold the buttons	
 				JPanel panel = new JPanel();
 				panel.setLayout(new BorderLayout());
-				panel.add(jb1, BorderLayout.NORTH);
-				panel.add(jb2, BorderLayout.SOUTH);
-				panel.add(jb3, BorderLayout.WEST);
-				panel.add(jb4, BorderLayout.EAST);
-				//jpanel.add(jb5, BorderLayout.CENTER);
+				panel.add(jb1);
+				panel.add(jb2);
+				panel.add(jb3);
+				panel.add(jb4);
+				panel.add(jb5);
 				
 			
 				add(panel);

@@ -1,6 +1,5 @@
 package gui;
 
-import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -29,12 +28,12 @@ class EventObjectWindow extends JFrame {
 		this.b2 = new JButton("Button 2");
 		b2.setActionCommand("Button2");
 		b2.addActionListener(new MultiButtonEventListener());
-		JPanel panel=new JPanel();
+		JPanel panel = new JPanel();
 		panel.add(b1);
 		panel.add(b2);
 		add(panel);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setSize(300,300);
+		setSize(300, 300);
 		setVisible(true);
 
 	}

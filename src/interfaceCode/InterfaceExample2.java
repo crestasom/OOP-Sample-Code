@@ -17,7 +17,7 @@ class Rectangle implements Shape {
 	double area;
 
 	public Rectangle(double len, double wid) {
-		super();
+		//super();
 		this.len = len;
 		this.wid = wid;
 	}

@@ -1,7 +1,5 @@
 package gui;
 
-import java.awt.HeadlessException;
-
 import javax.swing.JFrame;
 
 public class SimpleWindow2 extends JFrame {

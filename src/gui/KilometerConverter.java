@@ -26,7 +26,7 @@ class KilometerConverterWindow extends JFrame {
 	private JPanel panel;
 
 	public KilometerConverterWindow(String title) {
-		super(title);
+		//super(title);
 	}
 
 	private class CalcButtonListener implements ActionListener {
@@ -35,9 +35,8 @@ class KilometerConverterWindow extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			double input = Double.parseDouble(kiloTextField.getText());
 			double mile = input * 0.621371;
-			JOptionPane.showMessageDialog(null, input + " KM in mile = " + mile + " miles");
-			System.out.println("Converted value: " +mile);
-
+			JOptionPane.showMessageDialog(KilometerConverterWindow.this, input + " KM in mile = " + mile + " miles");
+			System.out.println("Converted value: " + mile);
 
 		}
 
@@ -48,8 +47,8 @@ class KilometerConverterWindow extends JFrame {
 		messageLabel = new JLabel("Enter a distance in kilometers");
 		kiloTextField = new JTextField(10);
 		calcButton = new JButton("Calculate");
-		CalcButtonListener list = new CalcButtonListener();
-		calcButton.addActionListener(list);
+		CalcButtonListener listener = new CalcButtonListener();
+		calcButton.addActionListener(listener);
 		panel = new JPanel();
 		panel.add(messageLabel);
 		panel.add(kiloTextField);

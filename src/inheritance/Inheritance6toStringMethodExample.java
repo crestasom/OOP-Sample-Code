@@ -5,6 +5,9 @@ public class Inheritance6toStringMethodExample {
 		Person123 p1 = new Person123(24, "Ram", "ram@mail.com");
 		Person123 p2 = new Person123(24, "Ram", "ram@mail.com");
 		// Person123 p2 = p1;
+		String s1 = "Ram";
+		p1.equals(s1);
+		Object o = new Person123(24, "Ram", "ram@mail.com");
 		System.out.println(p1.equals(p2));
 
 		// System.out.println(p);
@@ -50,8 +53,12 @@ class Person123 {
 
 	@Override
 	public boolean equals(Object p2) {
-		if (p2.getName().equals(this.name)) {
-			return true;
+
+		if (p2 instanceof Person123) {
+			Person123 p = (Person123) p2;
+			if (p.getName().equals(this.name)) {
+				return true;
+			}
 		}
 		return false;
 

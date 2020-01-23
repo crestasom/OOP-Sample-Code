@@ -20,7 +20,7 @@ class GUI extends JFrame {
 	public GUI(String title){
 		super(title);
 		jbutton1 = new JButton("Button1");
-		jbutton1.setForeground(Color.GRAY);
+		jbutton1.setForeground(new Color(255,255,255));
 		jbutton1.setBackground(Color.BLACK);
 		JPanel panel =new JPanel();
 		panel.add(jbutton1);

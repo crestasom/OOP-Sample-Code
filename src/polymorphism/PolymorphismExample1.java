@@ -3,11 +3,12 @@ package polymorphism;
 public class PolymorphismExample1 {
 
 	public static void main(String[] args) {
-		Shape s1=new Rectangle(3.4,5.4);
-		Shape s2=new Square(4.5);
+		Shape s1 = new Rectangle(3.4, 5.4);
+		Shape s2 = new Square(4.5);
+
 		System.out.println(s1.getArea());
 		System.out.println(s2.getArea());
-		//System.out.println(s2.getSide());
+		// System.out.println(s2.getSide());
 	}
 }
 
@@ -18,25 +19,29 @@ class Shape {
 
 }
 
-class Rectangle extends Shape{
+class Rectangle extends Shape {
 	private double length;
 	private double width;
+
 	public Rectangle(double length, double width) {
-		super();
+
 		this.length = length;
 		this.width = width;
 	}
-	
-	public double getArea() {
-		return length*width;
+
+	public void test() {
+
 	}
-	
+
+	/*
+	 * public double getArea() { return length*width; }
+	 */
+
 }
 
-class Square extends Shape{
+class Square extends Shape {
 	private double side;
-	
-	
+
 	public double getSide() {
 		return side;
 	}
@@ -46,10 +51,10 @@ class Square extends Shape{
 	}
 
 	public Square(double side) {
-		this.side=side;
+		this.side = side;
 	}
-	
+
 	public double getArea() {
-		return side*side;
+		return side * side;
 	}
 }

@@ -2,6 +2,7 @@ package gui;
 
 import java.awt.FlowLayout;
 import java.awt.Frame;
+import java.awt.LayoutManager;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -21,7 +22,8 @@ public class FlowWindow extends JFrame {
 		JPanel panel = new JPanel();
 		//panel.setLayout(new FlowLayout());
 		//to align component to left. default alignment is center
-		panel.setLayout(new FlowLayout(FlowLayout.LEFT,20,20));
+		LayoutManager fl=new FlowLayout(FlowLayout.RIGHT,20,20);
+		panel.setLayout(fl);
 		panel.add(jb1);
 		panel.add(jb2);
 		panel.add(jb3);

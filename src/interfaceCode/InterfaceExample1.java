@@ -1,5 +1,6 @@
 package interfaceCode;
 
+
 public class InterfaceExample1 {
 	public static void main(String[] args) {
 		Pig myPig = new Pig(); // Create a Pig object
@@ -9,9 +10,9 @@ public class InterfaceExample1 {
 }
 
 interface Animal {
-	public void animalSound(); // interface method (does not have a body)
+	 void animalSound(); // interface method (does not have a body)
 
-	public void sleep(); // interface method (does not have a body)
+	 void sleep(); // interface method (does not have a body)
 }
 
 //Pig "implements" the Animal interface
@@ -24,5 +25,7 @@ class Pig implements Animal {
 	public void sleep() { // The body of sleep() is provided here
 		System.out.println("Zzz");
 	}
+	
+
 
 }
