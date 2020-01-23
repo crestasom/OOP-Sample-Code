@@ -59,6 +59,7 @@ class Person123 {
 			if (p.getName().equals(this.name)) {
 				return true;
 			}
+
 		}
 		return false;
 

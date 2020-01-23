@@ -34,7 +34,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-
 public class RadioButtonDemo extends JFrame implements ActionListener {
 	static String birdString = "Bird";
 	static String catString = "Cat";
@@ -44,18 +43,19 @@ public class RadioButtonDemo extends JFrame implements ActionListener {
 	JRadioButton pigButton;
 
 	public RadioButtonDemo() {
-		
+
 		// Create the radio buttons.
-		JRadioButton birdButton = new JRadioButton(birdString);
-		birdButton.setMnemonic(KeyEvent.VK_B);
+		JRadioButton birdButton = new JRadioButton(birdString, true);
+		birdButton.setMnemonic(KeyEvent.VK_D);
 		birdButton.setActionCommand(birdString);
-		//birdButton.setSelected(true);
+		// birdButton.setSelected(true);
 
 		JRadioButton catButton = new JRadioButton(catString);
 		catButton.setMnemonic(KeyEvent.VK_C);
 		catButton.setActionCommand(catString);
 
-		JRadioButton dogButton = new JRadioButton(dogString);
+		JRadioButton dogButton = new JRadioButton();
+		dogButton.setText("DOG");
 		dogButton.setMnemonic(KeyEvent.VK_D);
 		dogButton.setActionCommand(dogString);
 
@@ -75,7 +75,6 @@ public class RadioButtonDemo extends JFrame implements ActionListener {
 		group.add(rabbitButton);
 		group.add(pigButton);
 
-		
 		// Register a listener for the radio buttons.
 		birdButton.addActionListener(this);
 		catButton.addActionListener(this);
@@ -99,8 +98,8 @@ public class RadioButtonDemo extends JFrame implements ActionListener {
 
 	/** Listens to the radio buttons. */
 	public void actionPerformed(ActionEvent e) {
-			JOptionPane.showMessageDialog(null,e.getActionCommand()+" is clicked");
-			//pigButton.doClick();
+		JOptionPane.showMessageDialog(null, e.getActionCommand() + " is clicked");
+		pigButton.doClick();
 	}
 
 	public static void main(String[] args) {
