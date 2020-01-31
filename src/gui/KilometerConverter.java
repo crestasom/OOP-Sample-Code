@@ -33,11 +33,14 @@ class KilometerConverterWindow extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			try {
 			double input = Double.parseDouble(kiloTextField.getText());
 			double mile = input * 0.621371;
 			JOptionPane.showMessageDialog(KilometerConverterWindow.this, input + " KM in mile = " + mile + " miles");
 			System.out.println("Converted value: " + mile);
-
+			}finally {
+				System.out.println("Inside Finally Block");
+			}
 		}
 
 	}
