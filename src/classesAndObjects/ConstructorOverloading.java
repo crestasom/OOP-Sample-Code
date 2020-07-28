@@ -6,31 +6,30 @@ import java.text.DecimalFormat;
 public class ConstructorOverloading {
 
 	public static void main(String[] args) {
-		InventoryItem i1=new InventoryItem();
-		InventoryItem i2=new InventoryItem("abc");
-		InventoryItem i3=new InventoryItem("abc",3);
-		
+		InventoryItem i1 = new InventoryItem();
+		InventoryItem i2 = new InventoryItem("abc");
+		InventoryItem i3 = new InventoryItem("abc", 3);
+
 	}
-	
+
 }
 
-
-class InventoryItem{
+class InventoryItem {
 	private String description;
 	private int units;
-	
+
 	public InventoryItem() {
-		description="";
-		units=0;
-		
+//		description="";
+//		units=0;
+		this("", 0);
+
 	}
-	
+
 	public InventoryItem(String description) {
-		this.description = description;
-		units=0;
+//		this.description = description;
+//		units = 0;
+		this(description,0);
 	}
-
-
 
 	public InventoryItem(String description, int units) {
 		this.description = description;
@@ -38,6 +37,7 @@ class InventoryItem{
 	}
 
 	public String getDescription() {
+		
 		return description;
 	}
 
@@ -48,12 +48,13 @@ class InventoryItem{
 	public int getUnits() {
 		return units;
 	}
+	
+	public InventoryItem getItem() {
+		return this;
+	}
 
 	public void setUnits(int units) {
 		this.units = units;
 	}
-	
-	
-	
-	
+
 }
