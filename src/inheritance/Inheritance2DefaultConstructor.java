@@ -10,20 +10,21 @@ public class Inheritance2DefaultConstructor {
 
 class Parent {
 
-	public Parent() {
+	public Parent(int x) {
 		System.out.println("Inside Parent Constructor");
 	}
 
-	public Parent(int x) {
-
-	}
+//	public Parent(int x) {
+//
+//	}
 }
 
 class Child extends Parent {
 
 	public Child(int x) {
-		
+		super(10);
 		System.out.println("Inside Child Constructor");
+		
 	}
 
 }
