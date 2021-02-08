@@ -20,10 +20,10 @@ public class FlowWindow extends JFrame {
 
 		// Define the panel to hold the buttons
 		JPanel panel = new JPanel();
-		//panel.setLayout(new FlowLayout());
-		//to align component to left. default alignment is center
-		LayoutManager fl=new FlowLayout(FlowLayout.RIGHT,20,20);
-		panel.setLayout(fl);
+		// panel.setLayout(new FlowLayout());
+		// to align component to left. default alignment is center
+		// FlowLayout fl=new FlowLayout();
+		//panel.setLayout(new FlowLayout(FlowLayout.LEFT, 100, 100));
 		panel.add(jb1);
 		panel.add(jb2);
 		panel.add(jb3);
@@ -32,7 +32,7 @@ public class FlowWindow extends JFrame {
 
 		// Set the window to be visible as the default to be false
 		add(panel);
-		setSize(300,300);
+		setSize(300, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setVisible(true);
 

@@ -10,6 +10,7 @@ public class AbsoluteComponentDemo extends JFrame {
 		button.setBounds(99, 88, 100, 30);
 		add(button);
 		setLayout(null);
+		setResizable(false);
 		setSize(400, 500);
 		setVisible(true);
 	}

@@ -20,10 +20,10 @@ class Vehicle {
 class Bike2 extends Vehicle {
 //defining the same method as in the parent class  
 	// must have same signature
-	@Override
+	@Override	
 	public void run() {
 
-		// super.run(); // uncomment this to observe Output
+		 super.run(); // uncomment this to observe Output
 
 		System.out.println("Bike is running safely");
 		super.run();

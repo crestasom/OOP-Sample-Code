@@ -24,10 +24,11 @@ class EventObjectWindow extends JFrame {
 		super(title);
 		this.b1 = new JButton("Button 1");
 		b1.setActionCommand("Button1");
-		b1.addActionListener(new MultiButtonEventListener());
+		MultiButtonEventListener listener = new MultiButtonEventListener();
+		b1.addActionListener(listener);
 		this.b2 = new JButton("Button 2");
 		b2.setActionCommand("Button2");
-		b2.addActionListener(new MultiButtonEventListener());
+		b2.addActionListener(listener);
 		JPanel panel = new JPanel();
 		panel.add(b1);
 		panel.add(b2);
@@ -44,18 +45,19 @@ class EventObjectWindow extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
 			if (e.getSource().equals(b1)) {
-				JOptionPane.showMessageDialog(null, "Button 1 is clicked");
+				JOptionPane.showMessageDialog(EventObjectWindow.this, "Button 1 is clicked");
 			} else if (e.getSource().equals(b2)) {
-				JOptionPane.showMessageDialog(null, "Button 2 is clicked");
+				JOptionPane.showMessageDialog(EventObjectWindow.this, "Button 2 is clicked");
 			}
 
 			// you can use this also
-			/*
-			 * if (e.getActionCommand().equals("Button1")) {
-			 * JOptionPane.showMessageDialog(null, "Button 1 is clicked"); } else if
-			 * (e.getActionCommand().equals("Button2")) {
-			 * JOptionPane.showMessageDialog(null, "Button 2 is clicked"); }
-			 */
+
+//			if (e.getActionCommand().equals("Button1")) {
+//				JOptionPane.showMessageDialog(null, "Button 1 is clicked");
+//			} else if (e.getActionCommand().equals("Button2")) {
+//				JOptionPane.showMessageDialog(null, "Button 2 is clicked");
+//			}
+
 		}
 
 	}

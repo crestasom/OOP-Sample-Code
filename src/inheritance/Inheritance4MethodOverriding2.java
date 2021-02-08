@@ -17,7 +17,7 @@ public class Inheritance4MethodOverriding2 {
 //where three classes are overriding the method of a parent class.  
 //Creating a parent class.  
 class Bank {
-	int getRateOfInterest() {
+	double getRateOfInterest() {
 		return 0;
 	}
 }
@@ -37,6 +37,6 @@ class Sunrise extends Bank {
 
 class Prabhu extends Bank {
 	int getRateOfInterest() {
-		return 9;
+		return "9";
 	}
 }

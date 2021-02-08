@@ -10,7 +10,7 @@ public class BoxLayoutExample extends JFrame {
 	public BoxLayoutExample(String title) {
 		super(title);
 		JPanel panel=new JPanel();
-		panel.setLayout(new BoxLayout(panel, BoxLayout.X_AXIS));
+		panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 		JButton b1=new JButton("Button 1");
 		JButton b2=new JButton("Button 2");
 		JButton b3=new JButton("Button 3");

@@ -23,14 +23,14 @@ public class GridWindow extends JFrame {
 		// Define the panel to hold the buttons
 		JPanel panel = new JPanel();
 
-		panel.setLayout(new GridLayout(1, 3));
+		panel.setLayout(new GridLayout(2, 10));
 		panel.add(jb1, 0);
 		panel.add(jb2, 1);
 		panel.add(jb3, 2);
 		panel.add(jb4, 3);
 		panel.add(jb5, 4);
-		panel.add(jb5);
-		panel.add(jb6);
+		panel.add(jb6, 5);
+		// panel.add(jb6);
 		// panel.add(jb1);
 
 		add(panel);

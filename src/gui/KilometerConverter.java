@@ -1,5 +1,6 @@
 package gui;
 
+import java.awt.Color;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,21 +27,21 @@ class KilometerConverterWindow extends JFrame {
 	private JPanel panel;
 
 	public KilometerConverterWindow(String title) {
-		//super(title);
+		super(title);
 	}
 
 	private class CalcButtonListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			try {
+			// try {
 			double input = Double.parseDouble(kiloTextField.getText());
 			double mile = input * 0.621371;
 			JOptionPane.showMessageDialog(KilometerConverterWindow.this, input + " KM in mile = " + mile + " miles");
-			System.out.println("Converted value: " + mile);
-			}finally {
-				System.out.println("Inside Finally Block");
-			}
+			// System.out.println("Converted value: " + mile);
+//			}finally {
+//				System.out.println("Inside Finally Block");
+//			}
 		}
 
 	}
@@ -50,6 +51,8 @@ class KilometerConverterWindow extends JFrame {
 		messageLabel = new JLabel("Enter a distance in kilometers");
 		kiloTextField = new JTextField(10);
 		calcButton = new JButton("Calculate");
+		calcButton.setBackground(Color.GREEN);
+		calcButton.setForeground(new Color(255, 0, 255));
 		CalcButtonListener listener = new CalcButtonListener();
 		calcButton.addActionListener(listener);
 		panel = new JPanel();
